@@ -24,7 +24,6 @@ def generate_fake(count=100, center_lat=41.1188466, center_long=29.0188823):
         location=str(randLatitude) + ', ' + str(randLongitude)
         allLocation.append(location)
         location = geolocater.reverse(location)
-        print("________________________",str(i))
         #make a map for locations
         folium.Marker(location= [randLatitude, randLongitude],popup=i+1 ).add_to(maslakMap)
         isLocationInBasket=False
